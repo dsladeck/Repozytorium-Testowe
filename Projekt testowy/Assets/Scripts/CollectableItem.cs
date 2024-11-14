@@ -16,7 +16,7 @@ public class CollectableItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y + 100 * Time.deltaTime, transform.localEulerAngles.z);
     }
 
     private void OnTriggerEnter(Collider other)
