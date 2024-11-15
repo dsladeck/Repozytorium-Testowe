@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
     public Transform startPoint;
 
     public int zebranePunkty;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
+
+
 
 
     // Start is called before the first frame update
@@ -49,9 +54,13 @@ public class PlayerController : MonoBehaviour
             transform.position = startPoint.position;
             rigidbody.velocity = Vector3.zero;
         }
-
-
-
-
     }
 }
+
+
+
+
+
+   
+
+

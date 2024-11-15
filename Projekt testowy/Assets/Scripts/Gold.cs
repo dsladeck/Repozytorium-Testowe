@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectableItem : MonoBehaviour
+public class Gold : MonoBehaviour
 {
     public PlayerController playerController;
     public AudioSource audioSource;
     public AudioClip audioClip;
 
     public MeshRenderer meshRenderer;
-    public CapsuleCollider capsuleCollider;
+    public SphereCollider sphereCollider;
 
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class CollectableItem : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         meshRenderer = GetComponent<MeshRenderer>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        sphereCollider = GetComponent<SphereCollider>();
 
     }
 
@@ -39,7 +39,7 @@ public class CollectableItem : MonoBehaviour
 
             //Destroy(this.gameObject);
             meshRenderer.enabled = false;
-            capsuleCollider.enabled = false;
+            sphereCollider.enabled = false;
         }
 
     }
