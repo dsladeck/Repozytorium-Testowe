@@ -7,6 +7,8 @@ public class MoveableCube : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
 
+    public int speed;
+
     public bool isMovingLeft = true;
 
 
@@ -16,7 +18,7 @@ public class MoveableCube : MonoBehaviour
         if (isMovingLeft)
         {
 
-            transform.Translate(-1 * Time.deltaTime, 0, 0);
+            transform.Translate(-1 * Time.deltaTime * speed, 0, 0);
             if (transform.position.x < endPoint.position.x)
             {
                 isMovingLeft = false;
@@ -24,7 +26,7 @@ public class MoveableCube : MonoBehaviour
         }
         else
         {
-            transform.Translate(1 * Time.deltaTime, 0, 0);
+            transform.Translate(1 * Time.deltaTime * speed, 0, 0);
             if (transform.position.x > startPoint.position.x)
             {
                 isMovingLeft = true;
